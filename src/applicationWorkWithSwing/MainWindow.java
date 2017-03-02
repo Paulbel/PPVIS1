@@ -9,8 +9,6 @@ class MainWindow {
 
     public  MainWindow()
     {
-
-
         taskNumber = 0;
         JFrame mainWindow = new JFrame("ППВИС Лаб. работа 1");
         mainWindow.getContentPane().setLayout(new FlowLayout());
@@ -18,25 +16,21 @@ class MainWindow {
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel1 = new JPanel();
-       // panel1.setSize(300,400);
         setTemplateUI(panel1);
         FirstPage page1 = new FirstPage(panel1);
         mainWindow.add(page1.getPanel());
 
         JPanel panel2 = new JPanel();
-       // panel2.setSize(300,400);
         setTemplateUI(panel2);
         SecondPage page2 = new SecondPage(panel2);
         mainWindow.add(page2.getPanel());
 
         JPanel panel3 = new JPanel();
-      //  panel3.setSize(300,400);
         setTemplateUI(panel3);
         ThirdPage page3 = new ThirdPage(panel3);
         mainWindow.add(page3.getPanelAddRadioSelected());
 
         JPanel panel4 = new JPanel();
-     //   panel4.setSize(300,400);
         setTemplateUI(panel4);
         ForthPage page4 = new ForthPage(panel4);
         mainWindow.add(page4.getPanelSelectCheckBox());
