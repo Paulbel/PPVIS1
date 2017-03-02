@@ -9,26 +9,27 @@ import java.awt.event.ActionListener;
  * Created by Sinelnikov on 28.02.2017.
  */
 public class ThirdPage {
-
+    JPanel panelAddRadioSelected;
     JRadioButton radioButtonFirst;
     JRadioButton radioButtonSecond;
     JRadioButton radioButtonThird;
     ThirdPage(JPanel panel){
+        panelAddRadioSelected = new JPanel();
+        panelAddRadioSelected = panel;
         JTextField txtField;
         txtField = new JTextField(10);
         JButton buttonCheckRadioButton;
         buttonCheckRadioButton = new JButton("Use radioButton");
-        panel.setSize(200,300);
-        panel.setLayout(new FlowLayout());
+        panelAddRadioSelected.setLayout(new FlowLayout());
         radioButtonFirst = new JRadioButton("First");
         radioButtonSecond = new JRadioButton("Second");
         radioButtonThird = new JRadioButton("Third");
-        panel.add(radioButtonFirst);
-        panel.add(radioButtonSecond);
-        panel.add(radioButtonThird);
-        panel.add(buttonCheckRadioButton);
-        panel.add(txtField);
-        panel.setVisible(true);
+        panelAddRadioSelected.add(radioButtonFirst);
+        panelAddRadioSelected.add(radioButtonSecond);
+        panelAddRadioSelected.add(radioButtonThird);
+        panelAddRadioSelected.add(buttonCheckRadioButton);
+        panelAddRadioSelected.add(txtField);
+        panelAddRadioSelected.setVisible(true);
         buttonCheckRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -56,5 +57,8 @@ public class ThirdPage {
         radioButtonSecond.setSelected(false);
         radioButtonThird.setSelected(false);
         selectedButton.setSelected(true);
+    }
+    public JPanel getPanelAddRadioSelected(){
+        return panelAddRadioSelected;
     }
 }

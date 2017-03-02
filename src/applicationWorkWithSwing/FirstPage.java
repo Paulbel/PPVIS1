@@ -1,10 +1,6 @@
 package applicationWorkWithSwing;
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-/**
- * Created by Sinelnikov on 25.02.2017.
- */
 public class FirstPage
 {
     private JPanel panelAddLineToComboBox;
@@ -14,10 +10,6 @@ public class FirstPage
         JComboBox comboBoxForEdit;
         JButton buttonAddToCombo;
         panelAddLineToComboBox = panel;
-    //    JPanel panelAddLineToComboBox = new JPanel();
-    //    panelAddLineToComboBox.getContentPane().setLayout(new FlowLayout());
-      //  panelAddLineToComboBox.setSize(300,400);
-    //    panelAddLineToComboBox.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         comboBoxForEdit = new JComboBox();
         buttonAddToCombo = new JButton("Add to Combo");
         comboBoxForEdit.setEditable(true);
