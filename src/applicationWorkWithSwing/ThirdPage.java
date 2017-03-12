@@ -20,15 +20,18 @@ public class ThirdPage {
         txtField = new JTextField(10);
         JButton buttonCheckRadioButton;
         buttonCheckRadioButton = new JButton("Use radioButton");
-        panelAddRadioSelected.setLayout(new FlowLayout());
+        GridLayout gridLayout = new GridLayout(3,2);
+        panelAddRadioSelected.setLayout(gridLayout);
         radioButtonFirst = new JRadioButton("First");
         radioButtonSecond = new JRadioButton("Second");
         radioButtonThird = new JRadioButton("Third");
         panelAddRadioSelected.add(radioButtonFirst);
-        panelAddRadioSelected.add(radioButtonSecond);
-        panelAddRadioSelected.add(radioButtonThird);
-        panelAddRadioSelected.add(buttonCheckRadioButton);
         panelAddRadioSelected.add(txtField);
+        panelAddRadioSelected.add(radioButtonSecond);
+        panelAddRadioSelected.add(buttonCheckRadioButton);
+        panelAddRadioSelected.add(radioButtonThird);
+
+
         panelAddRadioSelected.setVisible(true);
         buttonCheckRadioButton.addActionListener(new ActionListener() {
             @Override

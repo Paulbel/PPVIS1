@@ -21,11 +21,13 @@ public class ForthPage {
         JCheckBox firstCheck  = new JCheckBox("Coffee");
         JCheckBox secondCheck = new JCheckBox("Tea");
         JCheckBox thirdCheck = new JCheckBox("Nothing");
+        GridLayout gridLayout = new GridLayout(3,2);
+        panelSelectCheckBox.setLayout(gridLayout);
         panelSelectCheckBox.add(firstCheck);
-        panelSelectCheckBox.add(secondCheck);
-        panelSelectCheckBox.add(thirdCheck);
-        panelSelectCheckBox.add(checkNameInBox);
         panelSelectCheckBox.add(txtFieldCheckNameInBox);
+        panelSelectCheckBox.add(secondCheck);
+        panelSelectCheckBox.add(checkNameInBox);
+        panelSelectCheckBox.add(thirdCheck);
         panelSelectCheckBox.setVisible(true);
         checkNameInBox.addActionListener(new ActionListener() {
             @Override

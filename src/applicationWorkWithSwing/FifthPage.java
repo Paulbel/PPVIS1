@@ -21,9 +21,8 @@ public class FifthPage {
         JScrollPane scrollPaneWithTable = new JScrollPane(tableToBeChanged);
         scrollPaneWithTable.setPreferredSize(new Dimension(200,100));
         panelTableChangeWithButtons = panel;
-        JLabel lol = new JLabel("LOL");
+        panelTableChangeWithButtons.setLayout(new FlowLayout());
         panelTableChangeWithButtons.add(txtToBeAdded);
-        panelTableChangeWithButtons.add(lol);
         panelTableChangeWithButtons.add(buttonAddToFirstColumn);
         panelTableChangeWithButtons.add(buttonChangeColumnsSecondFirst);
         panelTableChangeWithButtons.add(buttonChangeColumnsFirstSecond);

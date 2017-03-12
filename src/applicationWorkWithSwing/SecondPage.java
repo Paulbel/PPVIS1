@@ -1,4 +1,5 @@
 package applicationWorkWithSwing;
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 /**
@@ -12,6 +13,8 @@ public class SecondPage{
         JTextField mainTextField = new JTextField(10);
         JButton buttonTextToSecondButton = new JButton("Rename second btn");
         JButton buttonChangeBtnText = new JButton("Swap names");
+        GridLayout gridLayout = new GridLayout(2,2);
+        panelChangeButtonText.setLayout(gridLayout);
         panelChangeButtonText.add(buttonChangeBtnText);
         panelChangeButtonText.add(buttonTextToSecondButton);
         panelChangeButtonText.add(mainTextField);

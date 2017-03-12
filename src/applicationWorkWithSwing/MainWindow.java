@@ -12,7 +12,7 @@ class MainWindow {
         taskNumber = 0;
         JFrame mainWindow = new JFrame("ППВИС Лаб. работа 1");
         mainWindow.getContentPane().setLayout(new FlowLayout());
-        mainWindow.setSize(1000,600);
+        mainWindow.setSize(1300,600);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel1 = new JPanel();
@@ -35,14 +35,7 @@ class MainWindow {
         ForthPage page4 = new ForthPage(panel4);
         mainWindow.add(page4.getPanelSelectCheckBox());
 
-//        JPanel panel2 = new JPanel();
-//        panel2.setSize(300,400);
-//        setTemplateUI(panel2);
-//        ThirdPage page3 = new ThirdPage(panel2);
-//        mainWindow.add(panel2);
-
         JPanel panel5 = new JPanel();
-    //    panel5.setSize(300,400);
         setTemplateUI(panel5);
         FifthPage page5 = new FifthPage( panel5);
         mainWindow.add(page5.getPanelTableChangeWithButtons());
@@ -55,7 +48,7 @@ class MainWindow {
     }
     public void setTemplateUI(JPanel panel){//creates border to Jpanel with task number
         panel.setBorder(BorderFactory.createTitledBorder("Task"+String.valueOf(addTask())));
-        panel.setSize(300,400);
+        panel.setSize(300,200);
     }
     public static void main(String args[]){
         EventQueue.invokeLater(new Runnable() {

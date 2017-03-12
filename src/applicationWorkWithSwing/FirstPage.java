@@ -1,4 +1,5 @@
 package applicationWorkWithSwing;
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 public class FirstPage
@@ -9,11 +10,13 @@ public class FirstPage
         JTextField jtf;
         JComboBox comboBoxForEdit;
         JButton buttonAddToCombo;
+        GridLayout gridLayout = new GridLayout(2,2);
         panelAddLineToComboBox = panel;
         comboBoxForEdit = new JComboBox();
         buttonAddToCombo = new JButton("Add to Combo");
         comboBoxForEdit.setEditable(true);
         jtf= new JTextField(10);
+        panelAddLineToComboBox.setLayout(gridLayout);
         panelAddLineToComboBox.add(jtf);
         panelAddLineToComboBox.add(comboBoxForEdit);
         panelAddLineToComboBox.add(buttonAddToCombo);
