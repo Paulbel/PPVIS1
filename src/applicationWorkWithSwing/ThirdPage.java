@@ -13,25 +13,27 @@ public class ThirdPage {
     JRadioButton radioButtonFirst;
     JRadioButton radioButtonSecond;
     JRadioButton radioButtonThird;
-    ThirdPage(JPanel panel){
+    ThirdPage(){
         panelAddRadioSelected = new JPanel();
-        panelAddRadioSelected = panel;
-        JTextField txtField;
-        txtField = new JTextField(10);
-        JButton buttonCheckRadioButton;
-        buttonCheckRadioButton = new JButton("Use radioButton");
-        GridLayout gridLayout = new GridLayout(3,2);
-        panelAddRadioSelected.setLayout(gridLayout);
+        panelAddRadioSelected.setBorder(BorderFactory.createTitledBorder("Task 3"));
+        panelAddRadioSelected.setPreferredSize(new Dimension(160,200));
+        Dimension defaultSizeForButtons = new Dimension(140,30);
+        JTextField txtField = new JTextField(10);
+        JButton buttonCheckRadioButton = new JButton("Use radioButton");
         radioButtonFirst = new JRadioButton("First");
+        radioButtonFirst.setEnabled(false);
+        radioButtonFirst.setPreferredSize(defaultSizeForButtons);
         radioButtonSecond = new JRadioButton("Second");
+        radioButtonSecond.setEnabled(false);
+        radioButtonSecond.setPreferredSize(defaultSizeForButtons);
         radioButtonThird = new JRadioButton("Third");
+        radioButtonThird.setEnabled(false);
+        radioButtonThird.setPreferredSize(defaultSizeForButtons);
         panelAddRadioSelected.add(radioButtonFirst);
-        panelAddRadioSelected.add(txtField);
         panelAddRadioSelected.add(radioButtonSecond);
-        panelAddRadioSelected.add(buttonCheckRadioButton);
         panelAddRadioSelected.add(radioButtonThird);
-
-
+        panelAddRadioSelected.add(txtField);
+        panelAddRadioSelected.add(buttonCheckRadioButton);
         panelAddRadioSelected.setVisible(true);
         buttonCheckRadioButton.addActionListener(new ActionListener() {
             @Override
@@ -50,7 +52,7 @@ public class ThirdPage {
                     radioButtonThird.setText(text);
                 }
                 else {
-                    JOptionPane.showMessageDialog(panel, "There is no any radio with name "+text);
+                    JOptionPane.showMessageDialog(panelAddRadioSelected, "There is no any radio with name "+text);
                 }
             }
         });

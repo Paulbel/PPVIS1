@@ -1,33 +1,36 @@
 package applicationWorkWithSwing;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-/**
- * Created by Sinelnikov on 27.02.2017.
- */
-public class SecondPage{
+
+public class SecondPage {
     private JPanel panelChangeButtonText;
-    
-    public SecondPage(JPanel panel){
-        panelChangeButtonText = panel;
-        JTextField mainTextField = new JTextField(10);
+
+    public SecondPage() {
+        panelChangeButtonText = new JPanel();
+        panelChangeButtonText.setBorder(BorderFactory.createTitledBorder("Task 2"));
+        panelChangeButtonText.setPreferredSize(new Dimension(160, 200));
+        Dimension defaultSizeForButtons = new Dimension(140,30);
+        JTextField mainTextField = new JTextField(13);
+
         JButton buttonTextToSecondButton = new JButton("Rename second btn");
         JButton buttonChangeBtnText = new JButton("Swap names");
-        GridLayout gridLayout = new GridLayout(2,2);
-        panelChangeButtonText.setLayout(gridLayout);
+        mainTextField.setPreferredSize(defaultSizeForButtons);
+        buttonTextToSecondButton.setPreferredSize(defaultSizeForButtons);
+        buttonChangeBtnText.setPreferredSize(defaultSizeForButtons);
         panelChangeButtonText.add(buttonChangeBtnText);
         panelChangeButtonText.add(buttonTextToSecondButton);
         panelChangeButtonText.add(mainTextField);
         panelChangeButtonText.setVisible(true);
-
         buttonTextToSecondButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = mainTextField.getText();
                 buttonChangeBtnText.setText(name);
+                mainTextField.setText("");
             }
         });
-
         buttonChangeBtnText.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,7 +40,8 @@ public class SecondPage{
             }
         });
     }
-    public JPanel getPanel(){
+
+    public JPanel getPanel() {
         return panelChangeButtonText;
     }
 }
