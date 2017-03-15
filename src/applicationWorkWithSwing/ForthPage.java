@@ -40,11 +40,20 @@ public class ForthPage {
             public void actionPerformed(ActionEvent e) {
                 String nameOfBox = txtFieldCheckNameInBox.getText();
                 if (nameOfBox.equals(firstCheck.getText())) {
-                    firstCheck.setSelected(true);
+                    if (firstCheck.isSelected()){
+                        firstCheck.setSelected(false);
+                    }
+                    else firstCheck.setSelected(true);
                 } else if (nameOfBox.equals(secondCheck.getText())) {
-                    secondCheck.setSelected(true);
+                    if (secondCheck.isSelected()){
+                        secondCheck.setSelected(false);
+                    }
+                    else secondCheck.setSelected(true);
                 } else if (nameOfBox.equals(thirdCheck.getText())) {
-                    thirdCheck.setSelected(true);
+                    if (thirdCheck.isSelected()){
+                        thirdCheck.setSelected(false);
+                    }
+                    else thirdCheck.setSelected(true);
                 } else {
                     JOptionPane.showMessageDialog(panelSelectCheckBox, "There is no " + nameOfBox + " here");
                 }
