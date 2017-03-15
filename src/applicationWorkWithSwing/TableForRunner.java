@@ -21,14 +21,18 @@ public class TableForRunner {
         scrollPaneWithTable.setPreferredSize(new Dimension(600, 160));
         panelForTableRunnerTask.add(btnStartOrFinishRunner);
         panelForTableRunnerTask.add(scrollPaneWithTable);
+        TableRunner runner = new TableRunner();
         btnStartOrFinishRunner.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(btnStartOrFinishRunner.getText().equals("Start runner")){
                     btnStartOrFinishRunner.setText("Stop runner");
+                    runner.start();
+
                 }
                 else {
                     btnStartOrFinishRunner.setText("Start runner");
+                    runner.finish();
                 }
             }
         });

@@ -18,6 +18,7 @@ class EntryPoint {
         FifthPage fifthTask = new FifthPage();
         TableForRunner newTask = new TableForRunner();
 
+
         mainWindow.add(firstTask.getPanel());
         mainWindow.add(secondTask.getPanel());
         mainWindow.add(thirdTask.getPanelAddRadioSelected());
