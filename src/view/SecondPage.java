@@ -1,4 +1,4 @@
-package applicationWorkWithSwing;
+package view;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -13,7 +13,6 @@ public class SecondPage {
         panelChangeButtonText.setPreferredSize(new Dimension(160, 200));
         Dimension defaultSizeForButtons = new Dimension(140,30);
         JTextField mainTextField = new JTextField(13);
-
         JButton buttonTextToSecondButton = new JButton("Rename second btn");
         JButton buttonChangeBtnText = new JButton("Swap names");
         mainTextField.setPreferredSize(defaultSizeForButtons);

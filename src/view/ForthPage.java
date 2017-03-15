@@ -1,4 +1,4 @@
-package applicationWorkWithSwing;
+package view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,19 +7,18 @@ import java.awt.event.ActionListener;
 
 
 public class ForthPage {
-    JPanel panelSelectCheckBox;
-    JButton checkNameInBox;
-    JTextField txtFieldCheckNameInBox;
+    private JPanel selectCheckBoxPane;
 
-    ForthPage() {
-        panelSelectCheckBox = new JPanel();
-        panelSelectCheckBox.setBorder(BorderFactory.createTitledBorder("Task 4"));
-        panelSelectCheckBox.setPreferredSize(new Dimension(160, 200));
+    public ForthPage() {
+        JTextField txtFieldCheckNameInBox;
+        selectCheckBoxPane = new JPanel();
+        selectCheckBoxPane.setBorder(BorderFactory.createTitledBorder("Task 4"));
+        selectCheckBoxPane.setPreferredSize(new Dimension(160, 200));
         Dimension defaultSizeForButtons = new Dimension(140, 30);
-        panelSelectCheckBox.setLayout(new FlowLayout());
-        panelSelectCheckBox.setSize(200, 300);
+        selectCheckBoxPane.setLayout(new FlowLayout());
+        selectCheckBoxPane.setSize(200, 300);
         txtFieldCheckNameInBox = new JTextField(10);
-        checkNameInBox = new JButton("Check and use");
+        JButton checkNameInBox = new JButton("Check and use");
         JCheckBox firstCheck = new JCheckBox("Coffee");
         firstCheck.setPreferredSize(defaultSizeForButtons);
         firstCheck.setEnabled(false);
@@ -29,40 +28,37 @@ public class ForthPage {
         JCheckBox thirdCheck = new JCheckBox("Nothing");
         thirdCheck.setPreferredSize(defaultSizeForButtons);
         thirdCheck.setEnabled(false);
-        panelSelectCheckBox.add(firstCheck);
-        panelSelectCheckBox.add(secondCheck);
-        panelSelectCheckBox.add(thirdCheck);
-        panelSelectCheckBox.add(txtFieldCheckNameInBox);
-        panelSelectCheckBox.add(checkNameInBox);
-        panelSelectCheckBox.setVisible(true);
+        selectCheckBoxPane.add(firstCheck);
+        selectCheckBoxPane.add(secondCheck);
+        selectCheckBoxPane.add(thirdCheck);
+        selectCheckBoxPane.add(txtFieldCheckNameInBox);
+        selectCheckBoxPane.add(checkNameInBox);
+        selectCheckBoxPane.setVisible(true);
         checkNameInBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nameOfBox = txtFieldCheckNameInBox.getText();
                 if (nameOfBox.equals(firstCheck.getText())) {
-                    if (firstCheck.isSelected()){
+                    if (firstCheck.isSelected()) {
                         firstCheck.setSelected(false);
-                    }
-                    else firstCheck.setSelected(true);
+                    } else firstCheck.setSelected(true);
                 } else if (nameOfBox.equals(secondCheck.getText())) {
-                    if (secondCheck.isSelected()){
+                    if (secondCheck.isSelected()) {
                         secondCheck.setSelected(false);
-                    }
-                    else secondCheck.setSelected(true);
+                    } else secondCheck.setSelected(true);
                 } else if (nameOfBox.equals(thirdCheck.getText())) {
-                    if (thirdCheck.isSelected()){
+                    if (thirdCheck.isSelected()) {
                         thirdCheck.setSelected(false);
-                    }
-                    else thirdCheck.setSelected(true);
+                    } else thirdCheck.setSelected(true);
                 } else {
-                    JOptionPane.showMessageDialog(panelSelectCheckBox, "There is no " + nameOfBox + " here");
+                    JOptionPane.showMessageDialog(selectCheckBoxPane, "There is no " + nameOfBox + " here");
                 }
                 txtFieldCheckNameInBox.setText("");
             }
         });
     }
 
-    public JPanel getPanelSelectCheckBox() {
-        return panelSelectCheckBox;
+    public JPanel getSelectCheckBoxPane() {
+        return selectCheckBoxPane;
     }
 }

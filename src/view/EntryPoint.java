@@ -1,4 +1,4 @@
-package applicationWorkWithSwing;
+package view;
 
 import java.awt.*;
 import javax.swing.*;
@@ -22,7 +22,7 @@ class EntryPoint {
         mainWindow.add(firstTask.getPanel());
         mainWindow.add(secondTask.getPanel());
         mainWindow.add(thirdTask.getPanelAddRadioSelected());
-        mainWindow.add(forthTask.getPanelSelectCheckBox());
+        mainWindow.add(forthTask.getSelectCheckBoxPane());
         mainWindow.add(fifthTask.getPanelTableChangeWithButtons());
         mainWindow.add(newTask.getPanelForTableRunnerTask());
 

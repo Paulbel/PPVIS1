@@ -1,16 +1,16 @@
-package applicationWorkWithSwing;
+package view;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class FirstPage {
-    private JPanel panelAddLineToComboBox;
+    private JPanel addLineToComboBoxPanel;
 
-    FirstPage() {
-        panelAddLineToComboBox = new JPanel();
-        panelAddLineToComboBox.setBorder(BorderFactory.createTitledBorder("Task 1"));
-        panelAddLineToComboBox.setPreferredSize(new Dimension(160, 200));
+    public FirstPage() {
+        addLineToComboBoxPanel = new JPanel();
+        addLineToComboBoxPanel.setBorder(BorderFactory.createTitledBorder("Task 1"));
+        addLineToComboBoxPanel.setPreferredSize(new Dimension(160, 200));
         Dimension defaultSizeForButtons = new Dimension(140,30);
         JComboBox comboBoxForEdit = new JComboBox();
         JButton buttonAddToCombo = new JButton("Add to Combo");
@@ -19,12 +19,10 @@ public class FirstPage {
         buttonAddToCombo.setPreferredSize(defaultSizeForButtons);
         textField.setPreferredSize(defaultSizeForButtons);
         comboBoxForEdit.setPreferredSize(defaultSizeForButtons);
-        panelAddLineToComboBox.add(comboBoxForEdit);
-        panelAddLineToComboBox.add(textField);
-
-
-        panelAddLineToComboBox.add(buttonAddToCombo);
-        panelAddLineToComboBox.setVisible(true);
+        addLineToComboBoxPanel.add(comboBoxForEdit);
+        addLineToComboBoxPanel.add(textField);
+        addLineToComboBoxPanel.add(buttonAddToCombo);
+        addLineToComboBoxPanel.setVisible(true);
         buttonAddToCombo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -32,7 +30,7 @@ public class FirstPage {
                 String item = textField.getText();
                 for (i = 0; i < comboBoxForEdit.getItemCount(); i++) {
                     if (item.equals(comboBoxForEdit.getItemAt(i))) {
-                        JOptionPane.showMessageDialog(panelAddLineToComboBox, item + " is already here");
+                        JOptionPane.showMessageDialog(addLineToComboBoxPanel, item + " is already here");
                         break;
                     }
                 }
@@ -46,7 +44,7 @@ public class FirstPage {
     }
 
     public JPanel getPanel() {
-        return panelAddLineToComboBox;
+        return addLineToComboBoxPanel;
     }
 
 }
